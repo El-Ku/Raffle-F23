@@ -16,7 +16,9 @@
 
 # Getting Started
 
-This contract allows users(funders) to fund a particular contract with native token. The accumulated tokens can be withdrawn by the owner of the contract anytime. There is a minimum amount of dollars worth of tokens one has to deposit funds successfully. 
+This contract allows users(buyers or players) to buy a ticket from the contract. And after the raffle interval is over, a winner will be drawn at random and all the ticket prices accumulated during that raffle interval will go to that particular winner. A user can buy more than one ticket, but by calling the the buyTicket function repeatedly.
+
+This project was done as part of the Foundry 2023 course by [Patrick Collins](https://twitter.com/PatrickAlphaC). So the repo is very similar to [his](https://github.com/Cyfrin/foundry-smart-contract-lottery-f23). Though I have skipped some steps, and I still have a TODO list to complete it fully.
 
 ## Requirements
 
@@ -29,8 +31,8 @@ This contract allows users(funders) to fund a particular contract with native to
 ## Quickstart
 
 ```
-git clone https://github.com/El-Ku/FundMe-F23
-cd FundMe-F23
+git clone https://github.com/El-Ku/Raffle-F23
+cd Raffle-F23
 forge build
 ```
 
@@ -39,7 +41,7 @@ forge build
 Deploy:
 
 ```
-forge script script/DeployFundMe.s.sol
+forge script script/DeployRaffle.s.sol
 ```
 
 ## Testing
@@ -60,6 +62,9 @@ or
 ```bash
 # Only run test functions matching the specified regex pattern.
 forge test --match-test testFunctionName
+# (OR)
+forge test --mt testFunctionName
+
 ```
 
 or
@@ -95,7 +100,7 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 3. Deploy
 
 ```
-forge script script/DeployFundMe.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
+forge script script/DeployRaffle.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
 ```
 
 ## Estimate gas
