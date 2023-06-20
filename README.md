@@ -1,6 +1,6 @@
-# Foundry Fund Me
+# Foundry Raffle
 
-- [Foundry Fund Me](#foundry-fund-me)
+- [Foundry Raffle](#foundry-raffle)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
