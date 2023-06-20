@@ -10,5 +10,7 @@ out/
 # Docs
 docs/
 
+FoundryTips.md
+
 # Dotenv file
 .env
